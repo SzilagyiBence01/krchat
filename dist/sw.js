@@ -1,7 +1,7 @@
-self.addEventListener("push", e =>{
+self.addEventListener("push", e => {
     const data = e.data?.text() || "No message";
     e.waitUntil(
-        self.registration.showNotifications("Chat Notifications", {
+        self.registration.showNotification("Chat Notifications", {
             body: data
         })
     );
