@@ -6,10 +6,10 @@ import { useEffect, useState } from 'preact/hooks';
 import { chatService } from './ChatService';
 import "./Pwa"
 
-
+Notification.requestPermission();
 function App()
 {
-	Notification.requestPermission();
+	
 	let [ renderCount, setRenderCount ] = useState( 1 );
 	console.log( "App render count: " + renderCount );
 	useEffect( () =>
